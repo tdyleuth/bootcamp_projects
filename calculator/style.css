@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+#app h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 8px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: 200px repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 480px;
+  height: 800px;
+  padding: 1rem;
+  background: rgb(235, 93, 93);
+  box-shadow: 5px 5px 5px -3px  black;
+  border-radius: 20px;
+  border: solid rgb(0, 0, 0) 10px;
+}
+
+.calculator button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight:bold;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px -3px  black;
+}
+
+.display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: 1 / 6;
+  grid-row: 1 / 4;
+  height: 160px;
+  background: rgb(226, 215, 151);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: inset 5px 4px 5px 1px black
+}
+
+.held-label {
+  grid-row: 1;
+  grid-column: 1 / 4;
+  padding-bottom:.05rem;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.held-value {
+  grid-row: 3;
+  grid-column: 1;
+  font-size: 40px;
+  text-align: center;
+}
+
+.next-operation {
+  font-size: 40px;
+  grid-row: 3;
+  grid-column: 3;
+  color: rgb(0, 0, 0);
+  
+}
+
+.next-value {
+  font-size: 40px;
+  grid-row: 3;
+  grid-column: 4 / 6;
+  text-align: center;
+}
+
+.controls {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 1 / 6;
+  grid-row: 2 / 10;
+  grid-gap: 15px;
+
+}
+
+.digits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column: 1 / 4;
+  grid-row: 2 / 6; 
+  grid-gap: 15px;
+}
+
+.digits :last-of-type {
+  grid-column: 2 / 4;
+}
+
+.digits button {
+  background: rgb(244, 215, 236);
+}
+
+.memory {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-column: 1 / 4;
+  grid-row: 1;
+  grid-gap: 15px;
+  
+}
+
+.memory button {
+  background: rgb(84, 208, 130);
+  font-size: 1em;
+}
+
+.operations {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column: 4 / 5;
+  grid-row: 1 / 6;
+  grid-gap: 15px; 
+}
+
+.operations button {
+  background-color: rgb(131, 135, 237);
+}
+
+button.equals {
+  background-color: rgb(243, 245, 94);
+}
